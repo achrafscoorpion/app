@@ -3,11 +3,12 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Group 1</ion-title>
+    <ion-title>group 2</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
   <ion-row>
     <ion-col width-25>
       <ion-item class="inp">
@@ -36,14 +37,14 @@
   <ion-label *ngIf="show_err">*name is required</ion-label>
 
 
-    <ion-item-group *ngFor="let item of items" >
-      <ion-item-divider color="light"></ion-item-divider>
-      <ion-item>id : {{item.id}}</ion-item>
-      <ion-item>groupid : {{item.groupid}}</ion-item>
-      <ion-item>mobile : {{item.mobile}}</ion-item>
-      <ion-item>name : {{item.name}}</ion-item>
-      <ion-item>active : {{item.active}}</ion-item>
-    </ion-item-group>
+  <ion-item-group *ngFor="let item of items" >
+    <ion-item-divider color="light"></ion-item-divider>
+    <ion-item>id : {{item.id}}</ion-item>
+    <ion-item>groupid : {{item.groupid}}</ion-item>
+    <ion-item>mobile : {{item.mobile}}</ion-item>
+    <ion-item>name : {{item.name}}</ion-item>
+    <ion-item>active : {{item.active}}</ion-item>
+  </ion-item-group>
 
 
 
