@@ -3,13 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>group 3</ion-title>
+    <button ion-button float-right="true" (click)="change()"><ion-icon name="search"></ion-icon></button>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
 
-  <ion-row>
+  <ion-row *ngIf="show">
     <ion-col width-25>
       <ion-item class="inp">
         <ion-label color="primary"  >Name</ion-label>
@@ -34,7 +35,7 @@
       <button ion-button (click)="search()">Search</button>
     </ion-col>
   </ion-row>
-  <ion-label *ngIf="show_err">*name is required</ion-label> 
+  <ion-label *ngIf="show_err">*name is required</ion-label>
 
 
   <ion-item-group *ngFor="let item of items" >

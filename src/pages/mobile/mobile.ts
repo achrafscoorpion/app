@@ -21,10 +21,16 @@ export class MobilePage {
   mobile:string="" ;
   groupid:string="" ;
   show_err : boolean = false ;
+  show : boolean = false ;
 
   constructor(public navCtrl: NavController,private http: HttpClient) {
 
   }
+  change()
+  {
+    this.show=true ;
+  }
+
 
   search()
   {
@@ -46,6 +52,7 @@ export class MobilePage {
 
       this.http.get(this.link)
         .subscribe((data : any) => {
+          this.show=false ;
           this.items=data ;
           console.log(JSON.stringify(data)) ;
 
